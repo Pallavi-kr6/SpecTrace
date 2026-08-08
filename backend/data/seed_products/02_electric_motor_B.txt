@@ -1,0 +1,20 @@
+TITLE: Havells-Type 3-Phase Squirrel Cage Induction Motor 5.5kW - Compact
+
+Product Datasheet - Foot Mounted Induction Motor
+Model: IM-5.5-4P-C
+
+Rated Power: 5.5 kW
+Rated Voltage: 415 V
+Rated Current: 10.2 A
+Supply Frequency: 50 Hz
+Rated Speed: 1450 RPM
+No of Poles: 4
+Efficiency Class: IE3
+Insulation Class: F
+Frame Size: 132S
+Net Weight: 43 kg
+Mounting: B3 Foot Mounted
+Standard: IS 12615 / IEC 60034
+
+Note: Compact frame variant of IM-5.5-4P. IP rating not listed on this
+revision of the datasheet -- confirm with manufacturer before publishing.

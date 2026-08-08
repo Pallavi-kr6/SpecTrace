@@ -1,0 +1,1219 @@
+{
+  "categories": {
+    "electric_motor": {
+      "label": "Electric Motor",
+      "keywords": [
+        "motor",
+        "induction motor",
+        "servo motor",
+        "ac motor",
+        "dc motor",
+        "gearmotor"
+      ],
+      "attributes": [
+        {
+          "canonical": "power_output",
+          "synonyms": [
+            "power",
+            "rated power",
+            "output power",
+            "motor power",
+            "hp rating"
+          ],
+          "unit": "kW",
+          "type": "number",
+          "min": 0.05,
+          "max": 5000,
+          "required": true
+        },
+        {
+          "canonical": "voltage",
+          "synonyms": [
+            "voltage",
+            "rated voltage",
+            "supply voltage",
+            "operating voltage"
+          ],
+          "unit": "V",
+          "type": "number",
+          "min": 12,
+          "max": 15000,
+          "required": true
+        },
+        {
+          "canonical": "current",
+          "synonyms": [
+            "current",
+            "rated current",
+            "full load current",
+            "fla"
+          ],
+          "unit": "A",
+          "type": "number",
+          "min": 0.1,
+          "max": 5000,
+          "required": false
+        },
+        {
+          "canonical": "frequency",
+          "synonyms": [
+            "frequency",
+            "supply frequency",
+            "hz"
+          ],
+          "unit": "Hz",
+          "type": "number",
+          "min": 40,
+          "max": 400,
+          "required": false
+        },
+        {
+          "canonical": "speed",
+          "synonyms": [
+            "speed",
+            "rated speed",
+            "rpm",
+            "rated rpm",
+            "synchronous speed"
+          ],
+          "unit": "RPM",
+          "type": "number",
+          "min": 1,
+          "max": 30000,
+          "required": true
+        },
+        {
+          "canonical": "poles",
+          "synonyms": [
+            "poles",
+            "no of poles",
+            "number of poles"
+          ],
+          "unit": "count",
+          "type": "number",
+          "min": 2,
+          "max": 12,
+          "required": false
+        },
+        {
+          "canonical": "efficiency_class",
+          "synonyms": [
+            "efficiency class",
+            "ie class",
+            "efficiency"
+          ],
+          "unit": null,
+          "type": "enum",
+          "options": [
+            "IE1",
+            "IE2",
+            "IE3",
+            "IE4"
+          ],
+          "required": false
+        },
+        {
+          "canonical": "ip_rating",
+          "synonyms": [
+            "ip rating",
+            "ip class",
+            "protection class",
+            "degree of protection"
+          ],
+          "unit": null,
+          "type": "enum",
+          "options": [
+            "IP21",
+            "IP23",
+            "IP44",
+            "IP54",
+            "IP55",
+            "IP56",
+            "IP65",
+            "IP66",
+            "IP67",
+            "IP68"
+          ],
+          "required": true
+        },
+        {
+          "canonical": "insulation_class",
+          "synonyms": [
+            "insulation class",
+            "insulation"
+          ],
+          "unit": null,
+          "type": "enum",
+          "options": [
+            "A",
+            "B",
+            "E",
+            "F",
+            "H"
+          ],
+          "required": false
+        },
+        {
+          "canonical": "frame_size",
+          "synonyms": [
+            "frame size",
+            "frame no",
+            "frame"
+          ],
+          "unit": null,
+          "type": "text",
+          "required": false
+        },
+        {
+          "canonical": "weight",
+          "synonyms": [
+            "weight",
+            "net weight",
+            "approx weight"
+          ],
+          "unit": "kg",
+          "type": "number",
+          "min": 0.1,
+          "max": 20000,
+          "required": false
+        },
+        {
+          "canonical": "mounting",
+          "synonyms": [
+            "mounting",
+            "mounting type",
+            "orientation"
+          ],
+          "unit": null,
+          "type": "text",
+          "required": false
+        },
+        {
+          "canonical": "compliance_standard",
+          "synonyms": [
+            "standard",
+            "compliance",
+            "certified to",
+            "conforms to",
+            "as per"
+          ],
+          "unit": null,
+          "type": "text",
+          "required": false
+        },
+        {
+          "canonical": "country_of_origin",
+          "synonyms": [
+            "country of origin",
+            "origin",
+            "made in",
+            "manufactured in"
+          ],
+          "unit": null,
+          "type": "text",
+          "required": false,
+          "dpp": true
+        },
+        {
+          "canonical": "material_recyclability_pct",
+          "synonyms": [
+            "recyclability",
+            "recyclable content",
+            "recycled content",
+            "recyclability percentage"
+          ],
+          "unit": "%",
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "required": false,
+          "dpp": true
+        },
+        {
+          "canonical": "hazardous_substances_declaration",
+          "synonyms": [
+            "rohs",
+            "reach",
+            "hazardous substances",
+            "svhc declaration",
+            "rohs compliance"
+          ],
+          "unit": null,
+          "type": "enum",
+          "options": [
+            "RoHS/REACH Compliant",
+            "Contains SVHC",
+            "Not Declared"
+          ],
+          "required": false,
+          "dpp": true
+        },
+        {
+          "canonical": "carbon_footprint_kgco2e",
+          "synonyms": [
+            "carbon footprint",
+            "co2e",
+            "embodied carbon",
+            "ghg emissions"
+          ],
+          "unit": "kgCO2e",
+          "type": "number",
+          "min": 0,
+          "max": 500000,
+          "required": false,
+          "dpp": true
+        }
+      ]
+    },
+    "centrifugal_pump": {
+      "label": "Centrifugal Pump",
+      "keywords": [
+        "pump",
+        "centrifugal pump",
+        "submersible pump",
+        "monoblock pump"
+      ],
+      "attributes": [
+        {
+          "canonical": "flow_rate",
+          "synonyms": [
+            "flow rate",
+            "capacity",
+            "discharge",
+            "flow"
+          ],
+          "unit": "m3/hr",
+          "type": "number",
+          "min": 0.1,
+          "max": 100000,
+          "required": true
+        },
+        {
+          "canonical": "head",
+          "synonyms": [
+            "head",
+            "total head",
+            "rated head",
+            "max head"
+          ],
+          "unit": "m",
+          "type": "number",
+          "min": 0.1,
+          "max": 2000,
+          "required": true
+        },
+        {
+          "canonical": "power_output",
+          "synonyms": [
+            "power",
+            "motor power",
+            "rated power",
+            "hp"
+          ],
+          "unit": "kW",
+          "type": "number",
+          "min": 0.05,
+          "max": 5000,
+          "required": true
+        },
+        {
+          "canonical": "voltage",
+          "synonyms": [
+            "voltage",
+            "rated voltage",
+            "supply voltage"
+          ],
+          "unit": "V",
+          "type": "number",
+          "min": 12,
+          "max": 15000,
+          "required": false
+        },
+        {
+          "canonical": "suction_size",
+          "synonyms": [
+            "suction size",
+            "suction dia",
+            "inlet size"
+          ],
+          "unit": "mm",
+          "type": "number",
+          "min": 1,
+          "max": 3000,
+          "required": false
+        },
+        {
+          "canonical": "discharge_size",
+          "synonyms": [
+            "discharge size",
+            "discharge dia",
+            "outlet size"
+          ],
+          "unit": "mm",
+          "type": "number",
+          "min": 1,
+          "max": 3000,
+          "required": false
+        },
+        {
+          "canonical": "max_temp",
+          "synonyms": [
+            "max temperature",
+            "max operating temp",
+            "temperature range"
+          ],
+          "unit": "C",
+          "type": "number",
+          "min": -40,
+          "max": 400,
+          "required": false
+        },
+        {
+          "canonical": "material",
+          "synonyms": [
+            "material",
+            "body material",
+            "casing material",
+            "construction"
+          ],
+          "unit": null,
+          "type": "text",
+          "required": true
+        },
+        {
+          "canonical": "ip_rating",
+          "synonyms": [
+            "ip rating",
+            "ip class",
+            "protection class"
+          ],
+          "unit": null,
+          "type": "enum",
+          "options": [
+            "IP44",
+            "IP54",
+            "IP55",
+            "IP65",
+            "IP68"
+          ],
+          "required": false
+        },
+        {
+          "canonical": "weight",
+          "synonyms": [
+            "weight",
+            "net weight"
+          ],
+          "unit": "kg",
+          "type": "number",
+          "min": 0.1,
+          "max": 20000,
+          "required": false
+        },
+        {
+          "canonical": "compliance_standard",
+          "synonyms": [
+            "standard",
+            "compliance",
+            "certified to",
+            "conforms to",
+            "as per"
+          ],
+          "unit": null,
+          "type": "text",
+          "required": false
+        },
+        {
+          "canonical": "country_of_origin",
+          "synonyms": [
+            "country of origin",
+            "origin",
+            "made in",
+            "manufactured in"
+          ],
+          "unit": null,
+          "type": "text",
+          "required": false,
+          "dpp": true
+        },
+        {
+          "canonical": "material_recyclability_pct",
+          "synonyms": [
+            "recyclability",
+            "recyclable content",
+            "recycled content",
+            "recyclability percentage"
+          ],
+          "unit": "%",
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "required": false,
+          "dpp": true
+        },
+        {
+          "canonical": "hazardous_substances_declaration",
+          "synonyms": [
+            "rohs",
+            "reach",
+            "hazardous substances",
+            "svhc declaration",
+            "rohs compliance"
+          ],
+          "unit": null,
+          "type": "enum",
+          "options": [
+            "RoHS/REACH Compliant",
+            "Contains SVHC",
+            "Not Declared"
+          ],
+          "required": false,
+          "dpp": true
+        },
+        {
+          "canonical": "carbon_footprint_kgco2e",
+          "synonyms": [
+            "carbon footprint",
+            "co2e",
+            "embodied carbon",
+            "ghg emissions"
+          ],
+          "unit": "kgCO2e",
+          "type": "number",
+          "min": 0,
+          "max": 500000,
+          "required": false,
+          "dpp": true
+        }
+      ]
+    },
+    "ball_valve": {
+      "label": "Ball Valve",
+      "keywords": [
+        "valve",
+        "ball valve",
+        "gate valve",
+        "butterfly valve",
+        "control valve"
+      ],
+      "attributes": [
+        {
+          "canonical": "size",
+          "synonyms": [
+            "size",
+            "nominal size",
+            "dn",
+            "valve size"
+          ],
+          "unit": "mm",
+          "type": "number",
+          "min": 1,
+          "max": 3000,
+          "required": true
+        },
+        {
+          "canonical": "pressure_rating",
+          "synonyms": [
+            "pressure rating",
+            "pn rating",
+            "rated pressure",
+            "pn"
+          ],
+          "unit": "bar",
+          "type": "number",
+          "min": 1,
+          "max": 1000,
+          "required": true
+        },
+        {
+          "canonical": "max_temp",
+          "synonyms": [
+            "max temperature",
+            "temperature rating",
+            "operating temperature"
+          ],
+          "unit": "C",
+          "type": "number",
+          "min": -200,
+          "max": 800,
+          "required": false
+        },
+        {
+          "canonical": "material",
+          "synonyms": [
+            "material",
+            "body material",
+            "construction"
+          ],
+          "unit": null,
+          "type": "text",
+          "required": true
+        },
+        {
+          "canonical": "end_connection",
+          "synonyms": [
+            "end connection",
+            "connection type",
+            "ends"
+          ],
+          "unit": null,
+          "type": "text",
+          "required": false
+        },
+        {
+          "canonical": "actuation",
+          "synonyms": [
+            "actuation",
+            "operation",
+            "actuator type"
+          ],
+          "unit": null,
+          "type": "text",
+          "required": false
+        },
+        {
+          "canonical": "weight",
+          "synonyms": [
+            "weight",
+            "net weight"
+          ],
+          "unit": "kg",
+          "type": "number",
+          "min": 0.05,
+          "max": 20000,
+          "required": false
+        },
+        {
+          "canonical": "compliance_standard",
+          "synonyms": [
+            "standard",
+            "compliance",
+            "certified to",
+            "conforms to",
+            "as per"
+          ],
+          "unit": null,
+          "type": "text",
+          "required": false
+        },
+        {
+          "canonical": "country_of_origin",
+          "synonyms": [
+            "country of origin",
+            "origin",
+            "made in",
+            "manufactured in"
+          ],
+          "unit": null,
+          "type": "text",
+          "required": false,
+          "dpp": true
+        },
+        {
+          "canonical": "material_recyclability_pct",
+          "synonyms": [
+            "recyclability",
+            "recyclable content",
+            "recycled content",
+            "recyclability percentage"
+          ],
+          "unit": "%",
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "required": false,
+          "dpp": true
+        },
+        {
+          "canonical": "hazardous_substances_declaration",
+          "synonyms": [
+            "rohs",
+            "reach",
+            "hazardous substances",
+            "svhc declaration",
+            "rohs compliance"
+          ],
+          "unit": null,
+          "type": "enum",
+          "options": [
+            "RoHS/REACH Compliant",
+            "Contains SVHC",
+            "Not Declared"
+          ],
+          "required": false,
+          "dpp": true
+        },
+        {
+          "canonical": "carbon_footprint_kgco2e",
+          "synonyms": [
+            "carbon footprint",
+            "co2e",
+            "embodied carbon",
+            "ghg emissions"
+          ],
+          "unit": "kgCO2e",
+          "type": "number",
+          "min": 0,
+          "max": 500000,
+          "required": false,
+          "dpp": true
+        }
+      ]
+    },
+    "proximity_sensor": {
+      "label": "Proximity Sensor",
+      "keywords": [
+        "sensor",
+        "proximity sensor",
+        "photoelectric sensor",
+        "inductive sensor"
+      ],
+      "attributes": [
+        {
+          "canonical": "sensing_range",
+          "synonyms": [
+            "sensing range",
+            "sensing distance",
+            "range"
+          ],
+          "unit": "mm",
+          "type": "number",
+          "min": 0.1,
+          "max": 5000,
+          "required": true
+        },
+        {
+          "canonical": "voltage",
+          "synonyms": [
+            "voltage",
+            "supply voltage",
+            "operating voltage"
+          ],
+          "unit": "V",
+          "type": "number",
+          "min": 3,
+          "max": 250,
+          "required": true
+        },
+        {
+          "canonical": "output_type",
+          "synonyms": [
+            "output type",
+            "output",
+            "switching output"
+          ],
+          "unit": null,
+          "type": "enum",
+          "options": [
+            "NPN",
+            "PNP",
+            "NO",
+            "NC",
+            "Analog"
+          ],
+          "required": true
+        },
+        {
+          "canonical": "ip_rating",
+          "synonyms": [
+            "ip rating",
+            "ip class",
+            "protection class"
+          ],
+          "unit": null,
+          "type": "enum",
+          "options": [
+            "IP65",
+            "IP67",
+            "IP68",
+            "IP69K"
+          ],
+          "required": false
+        },
+        {
+          "canonical": "housing_material",
+          "synonyms": [
+            "housing material",
+            "body material",
+            "material"
+          ],
+          "unit": null,
+          "type": "text",
+          "required": false
+        },
+        {
+          "canonical": "connector_type",
+          "synonyms": [
+            "connector type",
+            "connection",
+            "cable type"
+          ],
+          "unit": null,
+          "type": "text",
+          "required": false
+        },
+        {
+          "canonical": "weight",
+          "synonyms": [
+            "weight",
+            "net weight"
+          ],
+          "unit": "g",
+          "type": "number",
+          "min": 1,
+          "max": 10000,
+          "required": false
+        },
+        {
+          "canonical": "compliance_standard",
+          "synonyms": [
+            "standard",
+            "compliance",
+            "certified to",
+            "conforms to",
+            "as per"
+          ],
+          "unit": null,
+          "type": "text",
+          "required": false
+        },
+        {
+          "canonical": "country_of_origin",
+          "synonyms": [
+            "country of origin",
+            "origin",
+            "made in",
+            "manufactured in"
+          ],
+          "unit": null,
+          "type": "text",
+          "required": false,
+          "dpp": true
+        },
+        {
+          "canonical": "material_recyclability_pct",
+          "synonyms": [
+            "recyclability",
+            "recyclable content",
+            "recycled content",
+            "recyclability percentage"
+          ],
+          "unit": "%",
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "required": false,
+          "dpp": true
+        },
+        {
+          "canonical": "hazardous_substances_declaration",
+          "synonyms": [
+            "rohs",
+            "reach",
+            "hazardous substances",
+            "svhc declaration",
+            "rohs compliance"
+          ],
+          "unit": null,
+          "type": "enum",
+          "options": [
+            "RoHS/REACH Compliant",
+            "Contains SVHC",
+            "Not Declared"
+          ],
+          "required": false,
+          "dpp": true
+        },
+        {
+          "canonical": "carbon_footprint_kgco2e",
+          "synonyms": [
+            "carbon footprint",
+            "co2e",
+            "embodied carbon",
+            "ghg emissions"
+          ],
+          "unit": "kgCO2e",
+          "type": "number",
+          "min": 0,
+          "max": 500000,
+          "required": false,
+          "dpp": true
+        }
+      ]
+    },
+    "ball_bearing": {
+      "label": "Ball Bearing",
+      "keywords": [
+        "bearing",
+        "ball bearing",
+        "roller bearing",
+        "deep groove bearing"
+      ],
+      "attributes": [
+        {
+          "canonical": "bore_diameter",
+          "synonyms": [
+            "bore diameter",
+            "bore",
+            "inner diameter",
+            "id"
+          ],
+          "unit": "mm",
+          "type": "number",
+          "min": 1,
+          "max": 2000,
+          "required": true
+        },
+        {
+          "canonical": "outer_diameter",
+          "synonyms": [
+            "outer diameter",
+            "od"
+          ],
+          "unit": "mm",
+          "type": "number",
+          "min": 1,
+          "max": 3000,
+          "required": true
+        },
+        {
+          "canonical": "width",
+          "synonyms": [
+            "width",
+            "thickness"
+          ],
+          "unit": "mm",
+          "type": "number",
+          "min": 1,
+          "max": 1000,
+          "required": false
+        },
+        {
+          "canonical": "dynamic_load_rating",
+          "synonyms": [
+            "dynamic load rating",
+            "dynamic load",
+            "cr"
+          ],
+          "unit": "kN",
+          "type": "number",
+          "min": 0.1,
+          "max": 5000,
+          "required": false
+        },
+        {
+          "canonical": "max_speed",
+          "synonyms": [
+            "max speed",
+            "limiting speed",
+            "rpm rating"
+          ],
+          "unit": "RPM",
+          "type": "number",
+          "min": 1,
+          "max": 100000,
+          "required": false
+        },
+        {
+          "canonical": "material",
+          "synonyms": [
+            "material",
+            "steel grade"
+          ],
+          "unit": null,
+          "type": "text",
+          "required": false
+        },
+        {
+          "canonical": "seal_type",
+          "synonyms": [
+            "seal type",
+            "sealing",
+            "shield type"
+          ],
+          "unit": null,
+          "type": "text",
+          "required": false
+        },
+        {
+          "canonical": "weight",
+          "synonyms": [
+            "weight",
+            "net weight"
+          ],
+          "unit": "kg",
+          "type": "number",
+          "min": 0.001,
+          "max": 500,
+          "required": false
+        },
+        {
+          "canonical": "compliance_standard",
+          "synonyms": [
+            "standard",
+            "compliance",
+            "certified to",
+            "conforms to",
+            "as per"
+          ],
+          "unit": null,
+          "type": "text",
+          "required": false
+        },
+        {
+          "canonical": "country_of_origin",
+          "synonyms": [
+            "country of origin",
+            "origin",
+            "made in",
+            "manufactured in"
+          ],
+          "unit": null,
+          "type": "text",
+          "required": false,
+          "dpp": true
+        },
+        {
+          "canonical": "material_recyclability_pct",
+          "synonyms": [
+            "recyclability",
+            "recyclable content",
+            "recycled content",
+            "recyclability percentage"
+          ],
+          "unit": "%",
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "required": false,
+          "dpp": true
+        },
+        {
+          "canonical": "hazardous_substances_declaration",
+          "synonyms": [
+            "rohs",
+            "reach",
+            "hazardous substances",
+            "svhc declaration",
+            "rohs compliance"
+          ],
+          "unit": null,
+          "type": "enum",
+          "options": [
+            "RoHS/REACH Compliant",
+            "Contains SVHC",
+            "Not Declared"
+          ],
+          "required": false,
+          "dpp": true
+        },
+        {
+          "canonical": "carbon_footprint_kgco2e",
+          "synonyms": [
+            "carbon footprint",
+            "co2e",
+            "embodied carbon",
+            "ghg emissions"
+          ],
+          "unit": "kgCO2e",
+          "type": "number",
+          "min": 0,
+          "max": 500000,
+          "required": false,
+          "dpp": true
+        }
+      ]
+    },
+    "generic_industrial": {
+      "label": "Generic Industrial Product",
+      "keywords": [],
+      "attributes": [
+        {
+          "canonical": "dimensions",
+          "synonyms": [
+            "dimensions",
+            "size",
+            "overall dimensions"
+          ],
+          "unit": "mm",
+          "type": "text",
+          "required": false
+        },
+        {
+          "canonical": "material",
+          "synonyms": [
+            "material",
+            "construction"
+          ],
+          "unit": null,
+          "type": "text",
+          "required": false
+        },
+        {
+          "canonical": "weight",
+          "synonyms": [
+            "weight",
+            "net weight"
+          ],
+          "unit": "kg",
+          "type": "number",
+          "min": 0.001,
+          "max": 50000,
+          "required": false
+        },
+        {
+          "canonical": "ip_rating",
+          "synonyms": [
+            "ip rating",
+            "ip class",
+            "protection class"
+          ],
+          "unit": null,
+          "type": "enum",
+          "options": [
+            "IP20",
+            "IP44",
+            "IP54",
+            "IP65",
+            "IP67"
+          ],
+          "required": false
+        },
+        {
+          "canonical": "compliance_standard",
+          "synonyms": [
+            "standard",
+            "compliance",
+            "certified to",
+            "conforms to",
+            "as per"
+          ],
+          "unit": null,
+          "type": "text",
+          "required": false
+        },
+        {
+          "canonical": "country_of_origin",
+          "synonyms": [
+            "country of origin",
+            "origin",
+            "made in",
+            "manufactured in"
+          ],
+          "unit": null,
+          "type": "text",
+          "required": false,
+          "dpp": true
+        },
+        {
+          "canonical": "material_recyclability_pct",
+          "synonyms": [
+            "recyclability",
+            "recyclable content",
+            "recycled content",
+            "recyclability percentage"
+          ],
+          "unit": "%",
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "required": false,
+          "dpp": true
+        },
+        {
+          "canonical": "hazardous_substances_declaration",
+          "synonyms": [
+            "rohs",
+            "reach",
+            "hazardous substances",
+            "svhc declaration",
+            "rohs compliance"
+          ],
+          "unit": null,
+          "type": "enum",
+          "options": [
+            "RoHS/REACH Compliant",
+            "Contains SVHC",
+            "Not Declared"
+          ],
+          "required": false,
+          "dpp": true
+        },
+        {
+          "canonical": "carbon_footprint_kgco2e",
+          "synonyms": [
+            "carbon footprint",
+            "co2e",
+            "embodied carbon",
+            "ghg emissions"
+          ],
+          "unit": "kgCO2e",
+          "type": "number",
+          "min": 0,
+          "max": 500000,
+          "required": false,
+          "dpp": true
+        }
+      ]
+    }
+  },
+  "unit_conversions": {
+    "kW_to_HP": 1.34102,
+    "HP_to_kW": 0.745699,
+    "mm_to_inch": 0.0393701,
+    "inch_to_mm": 25.4,
+    "kg_to_lb": 2.20462,
+    "lb_to_kg": 0.453592,
+    "bar_to_psi": 14.5038,
+    "psi_to_bar": 0.0689476,
+    "C_to_F_offset": 32
+  },
+  "classification_codes": {
+    "electric_motor": {
+      "etim_class": "EC002841",
+      "etim_label": "AC motor",
+      "unspsc_code": "26111702",
+      "unspsc_label": "Alternating current AC motors"
+    },
+    "centrifugal_pump": {
+      "etim_class": "EC000117",
+      "etim_label": "Centrifugal pump",
+      "unspsc_code": "40101604",
+      "unspsc_label": "Centrifugal pumps"
+    },
+    "ball_valve": {
+      "etim_class": "EC000094",
+      "etim_label": "Ball valve",
+      "unspsc_code": "40141610",
+      "unspsc_label": "Ball valves"
+    },
+    "proximity_sensor": {
+      "etim_class": "EC001909",
+      "etim_label": "Proximity switch (sensor)",
+      "unspsc_code": "41111506",
+      "unspsc_label": "Proximity sensors"
+    },
+    "ball_bearing": {
+      "etim_class": "EC001466",
+      "etim_label": "Ball bearing",
+      "unspsc_code": "31171529",
+      "unspsc_label": "Ball bearings"
+    },
+    "generic_industrial": {
+      "etim_class": null,
+      "etim_label": "Unclassified -- no ETIM class matched",
+      "unspsc_code": "31000000",
+      "unspsc_label": "Manufacturing components and supplies (general)"
+    }
+  },
+  "dpp_context": {
+    "regulation": "EU Ecodesign for Sustainable Products Regulation (ESPR)",
+    "note": "DPP data fields are being phased in by product category under the ESPR Working Plan 2025-2030 (iron & steel from 2026; batteries, textiles, tyres & aluminium from 2027; electronics/ICT 2028-2029). These fields are optional today but tracked so catalogs are ready ahead of each category's compliance deadline.",
+    "fields": [
+      "country_of_origin",
+      "material_recyclability_pct",
+      "hazardous_substances_declaration",
+      "carbon_footprint_kgco2e"
+    ]
+  }
+}

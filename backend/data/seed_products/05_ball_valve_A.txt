@@ -1,0 +1,18 @@
+TITLE: DuraFlow 2-Piece Ball Valve DN25
+
+Product Datasheet - Screwed End Ball Valve
+
+Nominal Size: 25 mm
+Pressure Rating: 40 bar
+Max Temperature: 180 C
+Body Material: Stainless Steel 316
+End Connection: Threaded BSP
+Actuation: Manual Lever
+Net Weight: 1.2 kg
+Standard: ASME B16.34 / API 608
+Country of Origin: Germany
+Hazardous Substances Declaration: RoHS/REACH Compliant
+Material Recyclability: 88 %
+
+Note: Full bore design for minimal pressure drop, suitable for steam,
+water, oil and compressed air lines.

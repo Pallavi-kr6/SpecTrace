@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+{% block title %}SpecTrace AI — Catalog{% endblock %}
+{% block content %}
+
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">Document Intelligence · Knowledge Graph · Human-in-the-Loop</p>
+    <h1>Turn a spec sheet into a<br><em>trusted</em>, traceable product record.</h1>
+    <p class="hero-sub">Paste a paragraph, drop a supplier PDF, or import a whole catalog at once.
+      SpecTrace AI extracts, normalizes to an industrial taxonomy, validates against
+      real engineering ranges, assigns ETIM/UNSPSC classification codes, fills gaps from
+      similar catalog items, and cites its source for every value — so you can trust it
+      enough to publish.</p>
+  </div>
+  <div class="hero-panel">
+    <div class="spec-plate">
+      <div class="spec-plate-row">7-agent pipeline</div>
+      <ol class="pipeline-list">
+        <li><span class="step-num">1</span> Ingestion</li>
+        <li><span class="step-num">2</span> Extraction</li>
+        <li><span class="step-num">3</span> Normalization</li>
+        <li><span class="step-num">4</span> Validation &amp; Confidence</li>
+        <li><span class="step-num">5</span> Enrichment (graph inference)</li>
+        <li><span class="step-num">6</span> Classification (ETIM / UNSPSC)</li>
+        <li><span class="step-num">7</span> Knowledge Graph + Review Routing</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<div id="stat-row" class="stat-row"></div>
+
+<section class="panel upload-panel">
+  <div class="panel-head">
+    <h2>Ingest a product</h2>
+    <div class="panel-actions">
+      <button id="btn-seed" class="btn btn-ghost" type="button">Load sample catalog</button>
+      <button id="btn-reset" class="btn btn-ghost btn-danger" type="button">Reset all data</button>
+    </div>
+  </div>
+
+  <div class="tabs" id="ingest-tabs">
+    <button class="tab-btn active" data-tab="single" type="button">Single product</button>
+    <button class="tab-btn" data-tab="bulk" type="button">Bulk import (CSV)</button>
+  </div>
+
+  <div class="tab-panel active" id="tab-single">
+    <form id="ingest-form" class="ingest-form">
+      <div class="field-row">
+        <label class="field">
+          <span>Product title</span>
+          <input type="text" name="title" placeholder="e.g. IEC 5.5kW 3-Phase Induction Motor" required />
+        </label>
+        <label class="field field-narrow">
+          <span>Category (optional override)</span>
+          <select name="category_override">
+            <option value="">Auto-detect</option>
+            {% for c in categories %}
+            <option value="{{ c.id }}">{{ c.label }}</option>
+            {% endfor %}
+          </select>
+        </label>
+      </div>
+
+      <label class="field">
+        <span>Paste raw spec text (email, brochure copy, nameplate transcript…)</span>
+        <textarea name="text" rows="7" placeholder="Rated Power: 5.5 kW&#10;Rated Voltage: 415 V&#10;IP Rating: IP55 ..."></textarea>
+      </label>
+
+      <div class="field">
+        <span>…and/or upload a PDF datasheet</span>
+        <div class="dropzone" id="dropzone-single">
+          <div class="dz-display">
+            <div class="dropzone-title">Click to choose a file, or drag one here</div>
+            <div class="dropzone-sub">.pdf or .txt</div>
+            <div class="dropzone-filename" id="dz-filename-single"></div>
+          </div>
+          <input type="file" name="file" id="file-input-single" accept=".pdf,.txt" />
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-full">Run intelligence pipeline</button>
+    </form>
+    <div id="pipeline-trace" class="pipeline-trace" hidden></div>
+  </div>
+
+  <div class="tab-panel" id="tab-bulk">
+    <p class="panel-sub">Upload a CSV with one row per product (columns: <code>title</code>,
+      <code>text</code>, optional <code>category_override</code>). Every row runs through the
+      exact same pipeline as a single upload. <a href="/api/bulk-template.csv">Download a template</a>.</p>
+    <form id="bulk-form" class="ingest-form">
+      <div class="field">
+        <span>CSV file</span>
+        <div class="dropzone" id="dropzone-bulk">
+          <div class="dz-display">
+            <div class="dropzone-title">Click to choose a CSV, or drag one here</div>
+            <div class="dropzone-sub">one row per product</div>
+            <div class="dropzone-filename" id="dz-filename-bulk"></div>
+          </div>
+          <input type="file" name="file" id="file-input-bulk" accept=".csv" required />
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-full">Import catalog</button>
+    </form>
+    <div id="bulk-result"></div>
+  </div>
+</section>
+
+<section class="panel">
+  <div class="panel-head">
+    <h2>Product catalog</h2>
+    <div class="panel-actions">
+      <a href="/api/export/catalog.csv" class="btn btn-ghost">Export full catalog CSV</a>
+    </div>
+  </div>
+  <div class="filter-bar" id="filter-bar" hidden>
+    <div class="search-input-wrap">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="text" id="search-input" placeholder="Search products by name…" />
+    </div>
+    <select id="filter-category"><option value="">All categories</option></select>
+    <select id="filter-status">
+      <option value="">All statuses</option>
+      <option value="needs_review">Needs review</option>
+      <option value="clear">Fully verified</option>
+    </select>
+  </div>
+  <div id="product-list" class="product-table-wrap"></div>
+</section>
+
+{% endblock %}
+{% block scripts %}
+<script>SpecTrace.initHome();</script>
+{% endblock %}

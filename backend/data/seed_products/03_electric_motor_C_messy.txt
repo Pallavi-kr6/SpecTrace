@@ -1,0 +1,19 @@
+TITLE: GenDrive 3-Phase Induction Motor 7.5kW Heavy Duty
+
+This heavy duty motor is built for continuous industrial operation in
+foundries and rolling mills. It is a rugged, foot mounted 3-phase
+induction motor rated for tough ambient conditions.
+
+Rated Power: 7.5 kW
+Rated Voltage: 41500 V
+Rated Current: 14.2 A
+Supply Frequency: 50 Hz
+Rated Speed  1480
+IP Rating: IP-65
+Insulation Class: F
+Net Weight: 68 kg
+Standard: IEC 60034
+
+The unit ships with a standard terminal box on the right-hand side and
+is compatible with VFD operation up to 50m cable length without an
+output filter, though a sine wave filter is recommended beyond that.

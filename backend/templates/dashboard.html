@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Dashboard — SpecTrace AI{% endblock %}
+{% block content %}
+
+<div class="panel-head" style="margin-bottom:20px;">
+  <h2 style="font-size:22px;">Catalog health dashboard</h2>
+</div>
+<p class="panel-sub" style="margin:-14px 0 22px;">A snapshot of data quality and coverage across the whole
+  catalog — this is what "scaling across large product catalogs" looks like in practice.</p>
+
+<div id="dash-stat-row" class="stat-row"></div>
+
+<div class="dash-grid">
+  <div class="panel" style="margin-bottom:0;">
+    <div class="panel-head"><h2>Category breakdown</h2></div>
+    <div id="dash-categories"></div>
+  </div>
+  <div class="panel" style="margin-bottom:0;">
+    <div class="panel-head"><h2>Compliance &amp; classification coverage</h2></div>
+    <div id="dash-compliance"></div>
+  </div>
+</div>
+
+{% endblock %}
+{% block scripts %}
+<script>SpecTrace.initDashboard();</script>
+{% endblock %}

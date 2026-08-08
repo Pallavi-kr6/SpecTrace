@@ -1,0 +1,15 @@
+TITLE: SenTech Inductive Proximity Sensor M18
+
+Product Datasheet - Cylindrical Inductive Proximity Sensor
+
+Sensing Range: 8 mm
+Supply Voltage: 24 V
+Output Type: PNP
+IP Rating: IP67
+Housing Material: Nickel-plated Brass
+Connector Type: M12 4-pin
+Net Weight: 45 g
+Standard: IEC 60947-5-2
+
+Note: Suitable for machine tools, conveyors and automation panels
+exposed to coolant and light washdown.

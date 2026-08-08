@@ -1,0 +1,20 @@
+TITLE: CPX Series Centrifugal Monoblock Pump 2HP
+
+Product Datasheet - End Suction Centrifugal Pump
+Model: CPX-2H-32
+
+Flow Rate: 45 m3/hr
+Total Head: 18 m
+Rated Power: 1.5 kW
+Rated Voltage: 415 V
+Suction Size: 50 mm
+Discharge Size: 40 mm
+Max Operating Temp: 80 C
+Body Material: Cast Iron
+IP Rating: IP55
+Net Weight: 22 kg
+Standard: IS 1520
+Country of Origin: India
+
+Note: Suitable for water supply, irrigation and general industrial
+transfer applications. Not suitable for corrosive chemicals.

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Review Queue — SpecTrace AI{% endblock %}
+{% block content %}
+
+<section class="panel">
+  <div class="panel-head">
+    <h2>Human-in-the-loop review queue</h2>
+    <p class="panel-sub">Only attributes below the confidence threshold, failing a range/enum
+      check, or filled in by graph inference land here. Everything else auto-published.</p>
+  </div>
+  <div id="review-list" class="review-list">
+    <p class="empty-note">Loading…</p>
+  </div>
+</section>
+
+{% endblock %}
+{% block scripts %}
+<script>SpecTrace.initReviewQueue();</script>
+{% endblock %}

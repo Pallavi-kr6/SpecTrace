@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}{{ product.title }} — SpecTrace AI{% endblock %}
+{% block content %}
+
+<div id="product-detail-root" data-product-id="{{ product.id }}">
+  <p class="empty-note">Loading product record…</p>
+</div>
+
+{% endblock %}
+{% block scripts %}
+<script>SpecTrace.initProductDetail("{{ product.id }}");</script>
+{% endblock %}
