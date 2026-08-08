@@ -44,3 +44,5 @@ dist/
 uploads/
 tmp/
 temp/
+# Runtime catalog storage
+backend/data/store.json
